@@ -12,3 +12,9 @@
 .links > li > a:hover{
     color: #9ae3ef;
 }
+
+@media(max-width: 1200px){
+    .body{
+        text-align: center;
+    }
+}

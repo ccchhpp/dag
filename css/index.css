@@ -1,8 +1,16 @@
+.body{
+    position: relative;
+}
+
 .image-carousel{
-    width: 50%;
-    margin-top: 50px;
+    display: block;
+    margin: 50px 1.5% 0 1.5%;
     text-align: center;
     font-size: 50px;
+}
+
+.image > img{
+    width: 100%;
 }
 
 
@@ -14,6 +22,7 @@
     margin: 0;
     list-style: none;
     text-align: center;
+    bottom: 10px;
 }
 .slick-dots li.slick-active button:before{
     color:white;
@@ -31,8 +40,44 @@
     margin:auto;
 }
 
+
+.my-gallery {
+    display: block;
+    padding-top: 20px;
+    width: 100%;
+}
+.my-gallery img {
+    width: 100%;
+    height: auto;
+}
+.my-gallery figure {
+    display: inline-block;
+    margin: 0 1.5% 25px 1.5%;
+    width: 30%;
+}
+
+.my-gallery figcaption {
+    display: none;
+}
+
+.pswp__caption__center{
+    text-align: center;
+}
+
+
 @media(max-width: 1200px){
     .image-carousel{
         width: 100%;
+        margin: 0 0 0 0;
     }
+    
+    .my-gallery {
+        text-align: center;
+        padding: 0;
+    }
+    
+.my-gallery figure {
+    display: inline-block;
+    margin: 0;
+    width: 49%;
 }

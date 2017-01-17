@@ -16,7 +16,7 @@ html, body {
 
 .navbar{
     float: left;
-    width: 25%;
+    width: 320px;
     height: 100%;
 }
 
@@ -84,7 +84,6 @@ html, body {
     }
     
     .navbox{
-        background-color:;
         font-size: 13pt;
         position: static;
         top: auto;
@@ -101,6 +100,7 @@ html, body {
     }
     
     .navlist{
+        background-color: #171717;
         width: 100%;
         text-align: center;
         padding-top: 10px;
@@ -123,4 +123,13 @@ html, body {
     max-width: 100%; 
     display:block; 
     height: auto;
+}
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    z-index: 100;
 }
