@@ -1,0 +1,32 @@
+.image-carousel{
+    width: 50%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+.slick-dots{
+    color: gainsboro;
+    display: block;
+    width: 100%;
+    padding: 10;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li.slick-active button:before{
+    color:white;
+    font-size: 10px;
+}
+
+/* center text carousel */
+.slick-initialized .slick-slide {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slick-track {
+    margin:auto;
+}

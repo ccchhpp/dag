@@ -6,6 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Christiane Pham's art portfolio.">
 
+        <!-- jQuery -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        
+        <!-- PhotoSwipe -->
+        <link rel="stylesheet" href="PhotoSwipe/photoswipe.css"> 
+        <link rel="stylesheet" href="PhotoSwipe/default-skin/default-skin.css"> 
+        <script src="PhotoSwipe/photoswipe.min.js"></script> 
+        <script src="PhotoSwipe/photoswipe-ui-default.min.js"></script> 
+        
+        <!-- slick -->
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        
         <!-- css -->
         <link href="css/stylesheet.css" rel="stylesheet">
         <link href="css/index.css" rel="stylesheet">
@@ -14,19 +27,52 @@
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         
         <!-- favicon -->
-        <link rel="icon" type="image/png" href="favicon.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="192x192">
         
     </head>
     
     <body>
-        <div class="navbox">
-            <div class="navtitle"><a>chris p</a></div>
-            <ul class="navlist">
-                <li>work</li>
-                <li>about</li>
-                <li>links</li>
-                <li>résumé</li>
-            </ul>
+        <div class="navbar">
+            <div class="navbox">
+                <div class="navtitle"><a>chris p</a></div>
+                <ul class="navlist">
+                    <li><a class="selected" href="/">work</a></li>
+                    <li><a href="/about">about</a></li>
+                    <li><a href="/links">links</a></li>
+                    <li><a href="https://www.dropbox.com/s/f1apa5j7gz02a49/chp%20resume.pdf?dl=0">résumé</a></li>
+                </ul>
+            </div>
         </div>
+        <div class="body">
+            <div id="carousel-panel">
+                <div class="image-carousel">
+                    <div class="text">"Daggy Art Piece Goes Here"</div>
+                    <div class="text">"Don't forget to dab daily" <br>-Christiane Pham (2008)</div>
+                    <div class="text">R.I.P. Harambe.</div>
+                    <div class="text">If you have a dank meme please send it to me.</div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- slick -->
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.image-carousel').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    fade: false,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    speed: 1000,
+                    pauseOnHover: false,
+                    pauseOnFocus: false
+                });
+            });
+        </script>
     </body>
 </html>
