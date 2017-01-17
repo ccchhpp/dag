@@ -30,3 +30,9 @@
 .slick-track {
     margin:auto;
 }
+
+@media(max-width: 1200px){
+    .image-carousel{
+        width: 100%;
+    }
+}
