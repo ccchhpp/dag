@@ -1,0 +1,55 @@
+/* CONTAINS GLOBAL CSS */
+
+* {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+    background-color: #222222;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    height: 100%;
+}
+
+.navbox{
+    background-color:#171717;
+    font-size: 13pt;
+    position: fixed;
+    top: 0;
+    left: 30px;
+    padding: 25px 25px 35px 25px;
+    width: 200px;
+}
+
+.navtitle{
+    color: #03bbd7;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.navlist{
+    list-style: none;
+    color: #b0b0b0;
+    font-size: 17px;
+}
+
+.navlist > li{
+    margin-bottom: 2px;
+}
+
+/* GLOBAL DEFINITIONS */
+.img-responsive{
+    max-width: 100%; 
+    display:block; 
+    height: auto;
+}
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    z-index: 100;
+}
