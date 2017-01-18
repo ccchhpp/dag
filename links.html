@@ -47,7 +47,7 @@
             $(document).ready(function(){
                 var navHeight = $("#navlist").offset().top;
                 $(window).bind('scroll', function(){
-                    if($(window).scrollTop() > navHeight && (screen.width <= 1200)){
+                    if($(window).scrollTop() > navHeight && ($(window).width() <= 1200)){
                         $("#navlist").addClass('fixed');
                     }
                     else{
