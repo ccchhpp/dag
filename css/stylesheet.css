@@ -96,10 +96,12 @@ html, body {
     .navtitle{
         text-align: center;
         margin-top: 10px;
-        margin-bottom: 0;
+        margin-bottom: 45px;
     }
     
     .navlist{
+        position: absolute;
+        bottom: 0;
         background-color: #171717;
         width: 100%;
         text-align: center;
