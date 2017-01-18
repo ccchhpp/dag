@@ -110,7 +110,21 @@
                 </figure>
                 
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="images/gallery/9.jpg" itemprop="contentUrl" data-size="1896x714" type="url">
+                        <a href="images/gallery/9.jpg" itemprop="contentUrl" data-video='<div class="wrapper"><div class="video-wrapper"><iframe width="1280" height="720" src="https://www.youtube.com/embed/Y5PKfL5s0GY" frameborder="0" allowfullscreen></iframe></div></div>' type="video">
+                            <img src="images/gallery/thumbnails/repressed.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption itemprop="caption description">Art</figcaption>
+                </figure>
+                
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://player.vimeo.com/video/188789112" itemprop="contentUrl" data-video='<div class="wrapper"><div class="video-wrapper"><iframe src="https://player.vimeo.com/video/188789112" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>' type="video">
+                            <img src="images/gallery/thumbnails/emoter.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption itemprop="caption description">Art</figcaption>
+                </figure>
+                
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="mural" itemprop="contentUrl" data-size="1896x714" type="url">
                             <img src="images/gallery/thumbnails/9.png" itemprop="thumbnail" alt="Image description" />
                         </a>
                         <figcaption itemprop="caption description">Art</figcaption>
@@ -118,8 +132,7 @@
                 
             </div>
         </div>
-        
-        
+
         <!-- Root element of PhotoSwipe. Must have class pswp. -->
         <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
@@ -208,15 +221,23 @@
                         if(linkEl.getAttribute('type') == 'url'){
                             continue;
                         }
+                        
+                        if(linkEl.getAttribute('type') == 'video'){
+                            // create slide object
+                            item = {
+                                html: $(linkEl).data('video')
+                            };
+                            
+                        }else{
+                            size = linkEl.getAttribute('data-size').split('x');
 
-                        size = linkEl.getAttribute('data-size').split('x');
-
-                        // create slide object
-                        item = {
-                            src: linkEl.getAttribute('href'),
-                            w: parseInt(size[0], 10),
-                            h: parseInt(size[1], 10)
-                        };
+                            // create slide object
+                            item = {
+                                src: linkEl.getAttribute('href'),
+                                w: parseInt(size[0], 10),
+                                h: parseInt(size[1], 10)
+                            };
+                        }
 
 
 
