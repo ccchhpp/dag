@@ -154,7 +154,7 @@
                     var data = allLines[i].split(',');
                     if (data.length == headers.length) {
                         if(data[0] == '#'){
-                            galleryhtml+='<a href="'+data[2]+'" itemprop="contentUrl" ' + "data-video='"+data[3]+"' " + 'type="video">';
+                            galleryhtml+='<a href="'+data[2]+'" itemprop="contentUrl" ' + 'data-video='+ data[3] + ' type="video">';
                         }
                         else if(data[5] == "#"){
                             galleryhtml+='<a href="'+data[0]+'" itemprop="contentUrl" data-size="'+data[1]+'">';
