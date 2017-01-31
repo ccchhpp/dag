@@ -154,16 +154,16 @@
                     var data = allLines[i].split(',');
                     if (data.length == headers.length) {
                         if(data[0] == '#'){
-                            galleryhtml+='<a href="'+data[2]+'" itemprop="contentUrl" data-video="'+data[3]+'" type="video">'
+                            galleryhtml+='<a href="'+data[2]+'" itemprop="contentUrl" data-video="'+data[3]+'" type="video">';
                         }
                         else if(data[5] == "#"){
-                            galleryhtml+='<a href="'+data[0]+'" itemprop="contentUrl" data-size="'+data[1]+'">'
+                            galleryhtml+='<a href="'+data[0]+'" itemprop="contentUrl" data-size="'+data[1]+'">';
                         }
                         else{
-                            galleryhtml+='<a href="'+data[5]+'" itemprop="contentUrl" data-size="'+data[1]+'" type="url">'
+                            galleryhtml+='<a href="'+data[5]+'" itemprop="contentUrl" data-size="'+data[1]+'" type="url">';
                         }
                     }
-                    galleryhtml+='<img src="'+data[4]+'" itemprop="thumbnail" alt="Image description" /></a><figcaption itemprop="caption description">' + data[6]+'</figcaption></figure>'
+                    galleryhtml+='<img src="'+data[4]+'" itemprop="thumbnail" alt="Image description" /></a><figcaption itemprop="caption description">' + data[6]+'</figcaption></figure>';
                 }
                 $('#my-gallery').append(galleryhtml);
             }
