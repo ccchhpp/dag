@@ -45,18 +45,28 @@
         </div>
         <div class="body">
             <div id="carousel-panel">
+                <!-- IMAGES FOR CAROUSEL IN THIS DIV - Dimensions: 4128x2322 -->
                 <div class="image-carousel">
-                    <div class="image"><img src="images/carousel/1.jpg"></div>
+                    <!-- this links to mural page -->
+                    <a href="mural"><div class="image"><img src="images/carousel/1.jpg"></div></a>
+                    
+                    <!-- standard image in carousel. no link -->
                     <div class="image"><img src="images/carousel/2.jpg"></div>
                     <div class="image"><img src="images/carousel/3.jpg"></div>
                 </div>
             </div>
             
+            <!-- IMAGES FOR GALLERY IN THIS DIV -->
             <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                
+                <!-- standard gallery image -->
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <!-- link to actual image. Specify dimensions of image in data-size. Could be any size. -->
                         <a href="images/gallery/1.jpg" itemprop="contentUrl" data-size="1422x1200">
+                            <!-- link to thumbnail image - Dimensions: 500x400 -->
                             <img src="images/gallery/thumbnails/1.png" itemprop="thumbnail" alt="Image description" />
                         </a>
+                        <!-- Caption goes here -->
                         <figcaption itemprop="caption description">Art</figcaption>
                 </figure>
                 
