@@ -49,90 +49,7 @@
                 </div>
             </div>
             
-            <!-- IMAGES FOR GALLERY IN THIS DIV -->
-            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-                
-                <!-- standard gallery image -->
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <!-- link to actual image. Specify dimensions of image in data-size. Could be any size. -->
-                        <a href="images/gallery/1.jpg" itemprop="contentUrl" data-size="1422x1200">
-                            <!-- link to thumbnail image - Dimensions: 500x400 -->
-                            <img src="images/gallery/thumbnails/1.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <!-- Caption goes here -->
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="images/gallery/2.jpg" itemprop="contentUrl" data-size="913x1200">
-                            <img src="images/gallery/thumbnails/2.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="images/gallery/3.jpg" itemprop="contentUrl" data-size="1473x1200">
-                            <img src="images/gallery/thumbnails/3.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="images/gallery/4.jpg" itemprop="contentUrl" data-size="1920x1138">
-                            <img src="images/gallery/thumbnails/4.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="images/gallery/5.jpg" itemprop="contentUrl" data-size="1479x1200">
-                            <img src="images/gallery/thumbnails/5.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="images/gallery/6.jpg" itemprop="contentUrl" data-size="904x1200">
-                            <img src="images/gallery/thumbnails/6.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="images/gallery/7.jpg" itemprop="contentUrl" data-size="903x1200">
-                            <img src="images/gallery/thumbnails/7.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="images/gallery/8.jpg" itemprop="contentUrl" data-size="783x1200">
-                            <img src="images/gallery/thumbnails/8.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="https://www.youtube.com/embed/Y5PKfL5s0GY" itemprop="contentUrl" data-video='<div class="wrapper"><div class="video-wrapper"><iframe width="1280" height="720" src="https://www.youtube.com/embed/Y5PKfL5s0GY" frameborder="0" allowfullscreen></iframe></div></div>' type="video">
-                            <img src="images/gallery/thumbnails/repressed.jpg" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="https://player.vimeo.com/video/188789112" itemprop="contentUrl" data-video='<div class="wrapper"><div class="video-wrapper"><iframe src="https://player.vimeo.com/video/188789112" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>' type="video">
-                            <img src="images/gallery/thumbnails/emoter.jpg" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="mural" itemprop="contentUrl" data-size="1896x714" type="url">
-                            <img src="images/gallery/thumbnails/9.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-                
+            <div id="my-gallery" class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery"> 
             </div>
         </div>
 
@@ -220,6 +137,46 @@
                 $('#image-carousel').append(carousel);
             }
         </script>
+        
+        <!-- add html for gallery -->
+        <script>
+            $.ajax({ url: 'main-gallery.csv',
+                     dataType: 'text',
+                    }).done(processGallery);
+            
+            function processGallery(data){
+                var allLines = data.split(/\r\n|\n/);
+                var headers = allLines[0].split(',');
+                var galleryhtml = '';
+
+                for (var i=1; i<allLines.length; i++) {
+                    galleryhtml+='<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">'
+                    var data = allLines[i].split(',');
+                    if (data.length == headers.length) {
+                        if(data[0] == '#'){
+                            galleryhtml+='<a href="'+data[2]+'" itemprop="contentUrl" data-video="'+data[3]+'" type="video">'
+                        }
+                        else if(data[5] == "#"){
+                            galleryhtml+='<a href="'+data[0]+'" itemprop="contentUrl" data-size="'+data[1]+'">'
+                        }
+                        else{
+                            galleryhtml+='<a href="'+data[5]+'" itemprop="contentUrl" data-size="'+data[1]+'" type="url">'
+                        }
+                    }
+                    galleryhtml+='<img src="'+data[4]+'" itemprop="thumbnail" alt="Image description" /></a><figcaption itemprop="caption description">' + data[6]+'</figcaption></figure>'
+                }
+                $('#my-gallery').append(galleryhtml);
+            }
+        </script>
+        
+        
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="mural" itemprop="contentUrl" data-size="1896x714" type="url">
+                            <img src="images/gallery/thumbnails/9.png" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption itemprop="caption description">Art</figcaption>
+                </figure>
+        
           
         <!-- code to generate gallery -->
         <script>
