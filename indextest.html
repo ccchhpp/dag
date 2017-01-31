@@ -147,23 +147,23 @@
             function processGallery(data){
                 var allLines = data.split(/\r\n|\n/);
                 var headers = allLines[0].split(',');
-                var galleryhtml = '';
+                var galleryhtml = "";
 
                 for (var i=1; i<allLines.length; i++) {
-                    galleryhtml+='<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">'
+                    galleryhtml+="<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>"
                     var data = allLines[i].split(',');
                     if (data.length == headers.length) {
-                        if(data[0] == '#'){
-                            galleryhtml+='<a href="'+data[2]+'" itemprop="contentUrl" ' + 'data-video=\''+ data[3] + '\' type="video">';
+                        if(data[0] == "#"){
+                            galleryhtml+="<a href='"+data[2]+"' itemprop='contentUrl' data-video='" + data[3] + "' type='video'>";
                         }
                         else if(data[5] == "#"){
-                            galleryhtml+='<a href="'+data[0]+'" itemprop="contentUrl" data-size="'+data[1]+'">';
+                            galleryhtml+="<a href='"+data[0]+"' itemprop='contentUrl' data-size='" +data[1] + "'>";
                         }
                         else{
-                            galleryhtml+='<a href="'+data[5]+'" itemprop="contentUrl" data-size="'+data[1]+'" type="url">';
+                            galleryhtml+="<a href='" + data[5] + "' itemprop='contentUrl' data-size='"+data[1]+"' type='url'>";
                         }
                     }
-                    galleryhtml+='<img src="'+data[4]+'" itemprop="thumbnail" alt="Image description" /></a><figcaption itemprop="caption description">' + data[6]+'</figcaption></figure>';
+                    galleryhtml+="<img src='"+data[4]+"' itemprop='thumbnail' alt='Image description'/></a><figcaption itemprop='caption description'>" + data[6]+"</figcaption></figure>";
                 }
                 $('#my-gallery').append(galleryhtml);
             }
