@@ -113,6 +113,7 @@
         </div>
         
         <!-- add html for carousel -->
+        <script type="text/javascript" src="slick/slick.min.js"></script>
         <script>
             $.ajax({ url: 'main-carousel.csv',
                      dataType: 'text',
@@ -135,6 +136,20 @@
                     }
                 }
                 $('#image-carousel').append(carousel);
+                
+                $('.image-carousel').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    fade: false,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    speed: 1000,
+                    pauseOnHover: false,
+                    pauseOnFocus: false
+                });
             }
         </script>
         
@@ -386,26 +401,6 @@
 
             // execute above function
             initPhotoSwipeFromDOM('.my-gallery');
-        </script>
-        
-        <!-- slick -->
-        <script type="text/javascript" src="slick/slick.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.image-carousel').slick({
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: true,
-                    fade: false,
-                    infinite: true,
-                    autoplay: true,
-                    autoplaySpeed: 5000,
-                    speed: 1000,
-                    pauseOnHover: false,
-                    pauseOnFocus: false
-                });
-            });
         </script>
         
         <!-- Fixed navbar on scroll -->
