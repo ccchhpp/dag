@@ -154,7 +154,7 @@
                     var data = allLines[i].split(',');
                     if (data.length == headers.length) {
                         if(data[0] == '#'){
-                            galleryhtml+='<a href="'+data[2]+'" itemprop="contentUrl" data-video="'+data[3]+'" type="video">';
+                            galleryhtml+='<a href="'+data[2]+'" itemprop="contentUrl" ' + "data-video='"+data[3]+"' " + 'type="video">';
                         }
                         else if(data[5] == "#"){
                             galleryhtml+='<a href="'+data[0]+'" itemprop="contentUrl" data-size="'+data[1]+'">';
@@ -168,16 +168,7 @@
                 $('#my-gallery').append(galleryhtml);
             }
         </script>
-        
-        
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="mural" itemprop="contentUrl" data-size="1896x714" type="url">
-                            <img src="images/gallery/thumbnails/9.png" itemprop="thumbnail" alt="Image description" />
-                        </a>
-                        <figcaption itemprop="caption description">Art</figcaption>
-                </figure>
-        
-          
+
         <!-- code to generate gallery -->
         <script>
             var pswpElement = document.querySelectorAll('.pswp')[0];
