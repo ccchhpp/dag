@@ -172,7 +172,7 @@
                     galleryhtml+="<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>"
                     var data = allLines[i].split(',');
                     if (data.length == headers.length) {
-                        if(data[0] == "#" && data[5] != "#"){
+                        if(data[0] == "#" && data[2] != "#"){
                             galleryhtml+="<a href='"+data[2]+"' itemprop='contentUrl' data-video='" + data[3] + "' type='video'>";
                         }
                         else if(data[5] == "#"){
