@@ -125,6 +125,8 @@
                 var carousel = '';
 
                 for (var i=1; i<allLines.length; i++) {
+                    if(!allLines[i].includes(","))
+                        continue;
                     var data = allLines[i].split(',');
                     if (data.length == headers.length) {
                         if(data[1] == '#'){
@@ -165,10 +167,12 @@
                 var galleryhtml = "";
 
                 for (var i=1; i<allLines.length; i++) {
+                    if(!allLines[i].includes(","))
+                        continue;
                     galleryhtml+="<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>"
                     var data = allLines[i].split(',');
                     if (data.length == headers.length) {
-                        if(data[0] == "#"){
+                        if(data[0] == "#" && data[5] != "#"){
                             galleryhtml+="<a href='"+data[2]+"' itemprop='contentUrl' data-video='" + data[3] + "' type='video'>";
                         }
                         else if(data[5] == "#"){
