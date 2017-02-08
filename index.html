@@ -299,7 +299,7 @@
                     }
                     
                     if(linkEl.getAttribute('type') == 'url'){
-                        window.open("mural","_self");
+                        window.open(linkEl.getAttribute('href'),"_self");
                         return;
                     }
                     if(index >= 0) {
