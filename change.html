@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>/Change</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="/change">
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        
+        <!-- css -->
+        <link href="css/stylesheet.css" rel="stylesheet">
+        <link href="css/change.css" rel="stylesheet">
+        
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="192x192">
+        
+    </head>
+    
+    <body>
+        <div class="navbar">
+            <div class="navbox">
+                <div class="navtitle"><a href="/">chris p</a></div>
+                <ul class="navlist" id="navlist">
+                    <li><a class="selected" href="/">work</a></li>
+                    <li><a href="/about">about</a></li>
+                    <li><a href="/links">links</a></li>
+                    <li><a href="https://www.dropbox.com/s/f1apa5j7gz02a49/chp%20resume.pdf?dl=0">résumé</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="body">
+            <div id="header" class="panel">
+                <a>/CHANGE</a> <br><br>
+                a project by christiane pham
+            </div>
+            <div id="timeline" class="panel">
+                <a class="title">TIMELINE</a>
+                <ul>Wk 3: 1/24
+                    <li>Start acquiring material, plot out themes to use in paintings</li>
+                    <li>Look into painting materials if going traditional route</li>
+                </ul>
+                <ul>Wk 4: 1/31
+                    <li>Begin painting small scale pieces to test out AR with, decide between digital painting or traditional painting</li>
+                    <li>Check to see if some material is obtainable through borrowing before buying</li>
+                    <li>Start testing to see if the AR and projection mapping works on the painting surface or if alterations must be done in order for proper display</li>
+                    <li>Create and fill up project website page</li>
+                    <li>Start planning out narrative for storytelling</li>
+                </ul>
+                <ul>Wk 5: 2/7 Midterm presentations
+                    <li>Revise images and hopefully be almost complete with large painting</li>
+                    <li>Decide on the scale of the final project and feasibility</li>
+                    <li>Begin creating animations to use on the paintings, test to see visibility</li>
+                </ul>
+                <ul>Wk 6: 2/14 Finish midterms
+                    <li>Begin plotting out the final end result</li>
+                    <li>Fleshing out concepts and ideas in sketch paintings, rework for better conveyance of imagery</li>
+                </ul>
+                <ul>Wk 7: 2/21
+                    <li>Work on animation, refining</li>
+                </ul>
+                <ul>Wk 8: 2/28
+                    <li>Test and display, tweaking project</li>
+                    <li>Begin the other stages of the project</li>
+                </ul>
+                <ul>Wk 9: 3/7 Final Project and Paper Due
+                </ul>
+                <ul>Wk 10: Continue work on project
+                </ul>
+                <ul>Second quarter:
+                    <li>Work on concepts and integration with first painting, paint, animate, make sure all the technology works with each other</li>
+                    <li>Refining project for presentation and display in gallery, figure out a way to display it successfully</li>
+                </ul>
+            </div>
+            <div id="goals" class="panel">
+                <a class="title">GOALS</a><br><br>
+                <p>The aim of /change is to create a series of paintings that can be viewed as-is as well as have a separate element of augmented reality and projection mapping.<br><br>
+                These external alterations on the still image is a hybridization of printed media as well as interactive media and plays on the concept of viewing art through another channel. A viewer has the choice to observe the art piece quietly, loudly, or by pulling their AR app up on their phone.<br><br>
+                The concept chosen for this piece coincides with the aspect of change that AR and projection mapping cause. Seasons are the most commonly noted type of change, and whilst beauty in their state, with each shift to the next season the other must alter to give way.<br><br>
+                Ultimately, the finished project is predicted to have four finished illustrations that each have an animation associated with each that transitions into the other illustration.</p>
+            </div>
+            <div id="wip" class="panel">
+                <a class="title">WORK IN PROGRESS</a><br><br>
+                <p>As stated within the timeline listed above, currently the project is in its creation and experimentation phase. The progress is a little delayed, as the first image is not fully completed just yet, but augmented reality testing has already begun. An important step in this testing is to see if the trigger image needs to contain a bold marker (as shown with the blue rectangle) or if the trigger is able to be a less clear and distinct image.<br><br>
+                Another aspect that needs to be tested during this time is the rendering of the image. The current state of the first painting is aiming for a relatively full rendered final product, but this may prove to be difficult for animation purposes. For this reason, both high rendered and less rendered images will be tested to see which is a more feasible option.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Fixed navbar on scroll -->
+        <script>
+            $(document).ready(function(){
+                var navHeight = $("#navlist").offset().top;
+                $(window).bind('scroll', function(){
+                    if($(window).scrollTop() > navHeight && ($(window).width() <= 1200)){
+                        $("#navlist").addClass('fixed');
+                    }
+                    else{
+                        $('#navlist').removeClass('fixed');
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>

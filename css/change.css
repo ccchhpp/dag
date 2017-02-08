@@ -1,0 +1,41 @@
+.title{
+    color: #03bbd7;
+    font-size: 30pt;
+}
+
+.panel{
+    padding: 20px;
+    font-size: 14pt;
+}
+
+#header{
+    text-align: center;
+    font-size: 20pt;
+    background: #BFB478;
+}
+
+#header > a{
+    font-size: 50pt;
+}
+
+#timeline{
+    background: #010202;
+    line-height: 25px;
+    padding-top: 60px;
+}
+
+#timeline > ul {
+    margin-top: 20px;
+}
+
+ul > li{
+    margin-left: 40px;
+}
+
+#goals{
+    background: #38393C;
+}
+
+#wip{
+    background: #38393C;
+}
