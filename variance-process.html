@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Variance - Process</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="/change">
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        
+        <!-- Animate.css -->
+        <link href="css/animate.min.css" rel="stylesheet">
+        
+        <!-- css -->
+        <link href="css/stylesheet.css" rel="stylesheet">
+        <link href="css/variance.css?v=1.1" rel="stylesheet">
+        
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="192x192">
+        
+    </head>
+    
+    <body>
+        <div class="navbar">
+            <div class="navbox">
+                <div class="navtitle"><a href="/">chris p</a></div>
+                <ul class="navlist" id="navlist">
+                    <li><a class="selected" href="/">work</a></li>
+                    <li><a href="/about">about</a></li>
+                    <li><a href="/links">links</a></li>
+                    <li><a href="https://www.dropbox.com/s/f1apa5j7gz02a49/chp%20resume.pdf?dl=0">résumé</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="body">
+            <div id="header" class="panel">
+                <div id="header-content" class="animated fadeInDown">
+                    <div id="header-title" class="animated fadeInDown">variance</div> <br><br>
+                    <div id="header-sub" class="animated fadeIn">a project by christiane pham</div>
+                </div>
+            </div>
+            <div id="proj-nav" class="proj-nav">
+                <ul class="proj-pages" id="proj-pages">
+                    <li><a href="/variance">main</a></li>
+                    <li><a href="/variance-about">about</a></li>
+                    <li><a href="/variance-purpose">purpose</a></li>
+                    <li><a class="selected" href="/">process</a></li>
+                </ul>
+            </div>
+            <div id="process" class="panel">
+                <div class="left">
+                    <div class="text">
+                        <a class="title">PROCESS</a><br><br>
+                        <p>process text</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>process image</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Fixed navbar on scroll -->
+        <script>
+            $(document).ready(function(){
+                var navHeight = $("#navlist").offset().top;
+                $(window).bind('scroll', function(){
+                    if($(window).scrollTop() > navHeight && ($(window).width() <= 1200)){
+                        $("#navlist").addClass('fixed');
+                    }
+                    else{
+                        $('#navlist').removeClass('fixed');
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>

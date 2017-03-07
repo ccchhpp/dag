@@ -44,6 +44,40 @@
     animation-delay:1.5s;
 }
 
+.proj-nav{
+    text-align: center;
+}
+
+.proj-pages > li {
+    display: inline;
+    margin: 5px;
+    font-size: 15pt;
+    margin-bottom: 2px;
+}
+
+.proj-pages{
+    list-style: none;
+    color: #b0b0b0;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.proj-pages > li > a{
+    text-decoration: none;
+    color: #b0b0b0;
+}
+
+.proj-pages > li > a:hover{
+    color: #9ae3ef;
+}
+
+/* color of current page selection in navbox*/
+.proj-pages > li > a.selected{
+    color: #03bbd7;
+}
+
+
 #timeline{
     background: #010202;
     line-height: 25px;
