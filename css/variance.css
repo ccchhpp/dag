@@ -137,6 +137,7 @@ img{
         display: inline;
         background-color: black;
         width: 100%;
+        text-align: center;
     }
     
     .left, .right{
