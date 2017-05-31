@@ -181,6 +181,11 @@ img{
     }
 }
 
+.nodec{
+    text-decoration: none;
+    color: white;
+}
+
 .black{
     background-color: black;
 }
