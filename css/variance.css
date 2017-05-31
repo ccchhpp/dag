@@ -211,7 +211,7 @@ img{
     background-color: #010202;
 }
 .process > img, .process > video{
-    width: 75%;
+    width: 40%;
 }
 .process-button > img:hover{
     -webkit-filter: grayscale(100%);
@@ -227,7 +227,7 @@ img{
 }
 
 .process-button-small > img{
-    width: 30%;
+    width: 28%;
     margin: 0px 5px 40px 5px;
 }
 
