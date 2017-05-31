@@ -192,3 +192,11 @@ img{
 #about{
     padding-bottom: 50px;
 }
+
+/*Process page CSS */
+#process{
+    text-align: center;
+}
+#process > img{
+    width: 75%;
+}
