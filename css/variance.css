@@ -190,3 +190,8 @@ img{
 .justify{
     text-align: justify;
 }
+
+/* About Page CSS */
+#about{
+    padding-bottom: 50px;
+}

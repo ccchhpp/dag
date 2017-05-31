@@ -63,20 +63,5 @@
             </div>
             
         </div>
-        
-        <!-- Fixed navbar on scroll -->
-        <script>
-            $(document).ready(function(){
-                var navHeight = $("#navlist").offset().top;
-                $(window).bind('scroll', function(){
-                    if($(window).scrollTop() > navHeight && ($(window).width() <= 1200)){
-                        $("#navlist").addClass('fixed');
-                    }
-                    else{
-                        $('#navlist').removeClass('fixed');
-                    }
-                })
-            })
-        </script>
     </body>
 </html>
