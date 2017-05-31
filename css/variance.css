@@ -11,7 +11,7 @@
 #header{
     text-align: center;
     font-size: 20pt;
-    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 100%), url(../images/change/wip-header.jpg) repeat;
+    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 100%), url(../images/change/header.jpg) repeat;
     background-size: cover;
     overflow: hidden;
 }
@@ -188,15 +188,51 @@ img{
     text-align: justify;
 }
 
+.grayscale{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.grow { transition: all .2s ease-in-out;}
+.grow:hover {-webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        transform: scale(1.01);}
+
 /* About Page CSS */
 #about{
     padding-bottom: 50px;
 }
 
 /*Process page CSS */
-#process{
+.process{
     text-align: center;
+    background-color: #010202;
 }
-#process > img{
+.process > img, .process > video{
     width: 75%;
+}
+.process-button > img:hover{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+#process-main{
+    padding-bottom: 40px;
+}
+#process-main > a > img{
+    margin: 10px 0px 50px 0px;
+    width: 50%;
+}
+
+.process-button-small > img{
+    width: 30%;
+    margin: 0px 5px 40px 5px;
+}
+
+@media(max-width: 905px){
+    #process-main > a > img{
+        margin: 10px 0px 10px 0px;
+        width: 75%;
+    }
 }
