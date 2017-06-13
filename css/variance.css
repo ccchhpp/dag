@@ -96,6 +96,16 @@
     margin-top: 20px;
 }
 
+#instructions{
+    text-align: center;
+    background-color: black;
+}
+
+.aurasma-link{
+    text-decoration: none;
+    color: deepskyblue;
+}
+
 .panel > ul > li{
     margin-left: 40px;
 }
@@ -138,6 +148,10 @@ img{
         background-color: black;
         width: 100%;
         text-align: center;
+    }
+    
+    #instructions{
+        background-color: #38393C;
     }
     
     .left, .right{
@@ -241,4 +255,13 @@ img{
         margin: 10px 0px 10px 0px;
         width: 75%;
     }
+}
+
+
+
+
+
+.centeredlist{
+    list-style-position: inside;
+    
 }
