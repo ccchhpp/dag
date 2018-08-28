@@ -1,0 +1,173 @@
+body {
+    font-family: 'Karla', sans-serif;
+    background-color:#F5F5F5;
+    color:#585858;
+}
+
+/*Colors*/
+.bg-pastel-blue{
+    background-color:#B4DAF2;
+}
+.bg-pastel-green{
+    background-color:#B2EECD;
+}
+.bg-pastel-red{
+    background-color:#F9BFB9;
+}
+.bg-pastel-yellow{
+    background-color:#FBEBA8;
+}
+.bg-pastel-dark{
+    background-color:#EBEBEB
+}
+
+.text-pastel-blue{
+    color:#76c7f7;
+}
+/*END Colors*/
+
+/*Header*/
+.header-nav-item{
+    color:#585858;
+}
+.header-nav-item:hover{
+    color:#585858;
+    font-weight:600;
+}
+/*END Header*/
+
+/*Work*/
+.nav-tabs{
+    border-bottom:none;
+}
+.nav-link{
+    color:inherit;
+    border:none;
+}
+.nav-link:hover{
+    color:#F9BFB9;
+}
+@media (max-width:500px){
+    .nav-link{
+        padding: .5rem .5rem;
+    }
+}
+@media (max-width:415px){
+    .nav-link{
+        font-size:.8rem;
+    }
+}
+@media (max-width:350px){
+    .nav-link{
+        font-size:.7rem;
+    }
+}
+.nav-tabs .nav-link{
+    border:none;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background-color:transparent;
+    border:none;
+    color:inherit;
+    border-bottom:2px solid #F9BFB9;
+    font-weight: bold;
+}
+
+.grid-sizer{width:20%;}
+.grid-item{
+    float:left;
+    padding:0.5rem;
+    width:20%;
+    cursor:pointer;
+}
+.grid-item-2{
+    width:40%;
+}
+.grid-item-3{
+    width:60%;
+}
+.grid-item-project{
+    width:20%;
+}
+@media (max-width:1200px){
+    .grid-sizer{width:25%;}
+    .grid-item{
+        float:left;
+        padding:0.5rem;
+        width:25%;
+    }
+    .grid-item-2{
+        width:50%;
+    }
+    .grid-item-3{
+        width:75%;
+    }
+    .grid-item-project{
+        width:50%;
+    }
+}
+@media (max-width:768px){
+    .grid-sizer{width:33%;}
+    .grid-item{
+        float:left;
+        padding:0.5rem;
+        width:33%;
+    }
+    .grid-item-2{
+        width:66%;
+    }
+    .grid-item-3{
+        width:99%;
+    }
+    .grid-item-project{
+        width:99%;
+    }
+}
+@media (max-width:576px){
+    .grid-sizer{width:50%;}
+    .grid-item{
+        float:left;
+        padding:0.5rem;
+        width:50%;
+    }
+    .grid-item-2{
+        width:100%;
+    }
+    .grid-item-3{
+        width:100%;
+    }
+    .grid-item-project{
+        width:100%;
+    }
+}
+.grid-item-full{
+    width:100%;
+}
+/*END Work*/
+
+/*About*/
+#about{
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
+}
+/*END About*/
+
+/*Contact*/
+#contact{
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
+}
+/*END Contact*/
+
+/*Tools*/
+.w-fit{
+    width:fit-content;
+}
+.anchor-nodec{
+    color: inherit;
+}
+.anchor-nodec:hover{
+    color: inherit;
+    font-weight:600;
+}
+/*END Tools*/

@@ -1,425 +1,267 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html lang="en">
     <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Christiane Pham's Art Portfolio." />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#76c7f7">
+        <meta name="apple-mobile-web-app-title" content="chpham.site">
+        <meta name="application-name" content="chpham.site">
+        <meta name="msapplication-TileColor" content="#42b4f7">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+        <link rel="stylesheet" href="/css/animasta.css?v=0.1" />
+        <link rel="stylesheet" href="/css/site.css?v=0.1" />
         <title>Christiane Pham</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Christiane Pham's art portfolio.">
-
-        <!-- jQuery -->
-        <script src="js/jquery-3.1.1.min.js"></script>
-        
-        <!-- PhotoSwipe -->
-        <link rel="stylesheet" href="PhotoSwipe/photoswipe.css"> 
-        <link rel="stylesheet" href="PhotoSwipe/default-skin/default-skin.css"> 
-        <script src="PhotoSwipe/photoswipe.min.js"></script> 
-        <script src="PhotoSwipe/photoswipe-ui-default.min.js"></script> 
-        
-        <!-- slick -->
-        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-        
-        <!-- css -->
-        <link href="css/stylesheet.css" rel="stylesheet">
-        <link href="css/index.css" rel="stylesheet">
-        
-        <!-- font -->
-        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-        
-        <!-- favicon -->
-        <link rel="icon" type="image/png" href="images/favicon.png" sizes="192x192">
-        
     </head>
-    
     <body>
-        <div class="navbar">
-            <div class="navbox">
-                <div class="navtitle"><a href="/">chris p</a></div>
-                <ul class="navlist" id="navlist">
-                    <li><a class="selected" href="/">work</a></li>
-                    <li><a href="/about">about</a></li>
-                    <li><a href="/links">links</a></li>
-                    <li><a href="https://www.dropbox.com/s/f1apa5j7gz02a49/chp%20resume.pdf?dl=0">résumé</a></li>
+        <div class="container-fluid p-0">
+            <!--Header-->
+            <div class="mx-sm-5 mx-4 my-5 pt-4" id="header">
+                <h1 class="display-4" id="name">Hello, I'm <text class="text-pastel-blue">Christiane Pham</text></h1>
+                <h2>freelance illustrator</h2>
+                <ul class="list-inline h3 mt-5 header-nav">
+                    <li class="list-inline-item">
+                        <a href="#work" class="header-nav-item">Work</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#about" class="header-nav-item">About</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#contact" class="header-nav-item">Contact</a>
+                    </li>
                 </ul>
             </div>
-        </div>
-        <div class="body">
-            <div id="carousel-panel">
-                <div id="image-carousel" class="image-carousel">
-                </div>
+
+            <!--furry friend-->
+            <div class="text-center m-5 p-5" style="position:relative;overflow-x:hidden;">
+                <img class="img-fluid" src="/images/cat.png" style="max-width:125px" id="cat">
+                <div id="catWoke" class="d-none" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);cursor:default;">cat woke up...</div>
             </div>
             
-            <div id="my-gallery" class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery"> 
-            </div>
-        </div>
+            <!--Work-->
+            <div class="text-center mx-sm-4 mx-3" id="work">
+                <ul class="nav nav-tabs mb-4" id="workNav" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="illustrations-tab" data-toggle="tab" href="#illustrations" role="tab" aria-controls="illustrations" aria-selected="true" onclick="gridSort('illustration')">Illustrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false" onclick="gridSort('project')">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="fanbooks-tab" data-toggle="tab" href="#fanbooks" role="tab" aria-controls="fanbooks" aria-selected="false" onclick="gridSort('fanbook')">Fanbooks</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" id="merchandise-tab" data-toggle="tab" href="#merchandise" role="tab" aria-controls="merchandise" aria-selected="false" onclick="gridSort('merchandise')">Merchandise</a>
+                    </li>
+                </ul>
+                <div class="grid">
+                    <div class="grid-sizer"></div>
 
-        <!-- Root element of PhotoSwipe. Must have class pswp. -->
-        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                    <!--Illustrations-->
+                    <img class="grid-item illustration" src="/images/illustrations/ffxv_holy.png">
+                    <img class="grid-item illustration" src="/images/illustrations/fire_emblem_corrin.png">
+                    <img class="grid-item illustration" src="/images/illustrations/pink_girl.png">
+                    <img class="grid-item illustration" src="/images/illustrations/tg_cards.jpg">
+                    <img class="grid-item illustration" src="/images/illustrations/tg_feast.png">
+                    <div class="grid-item illustration">
+                        <img class="img-fluid mb-1" src="/images/illustrations/ffxv_postcard_1.png">
+                        <img class="img-fluid" src="/images/illustrations/ffxv_postcard_2.png">
+                    </div>
+                    <img class="grid-item illustration" src="/images/illustrations/ded_boi.png">
+                    <img class="grid-item illustration" src="/images/illustrations/ffxv_portrait.jpg">
+                    <img class="grid-item illustration" src="/images/illustrations/ffxv_overlay.jpg">
+                    <img class="grid-item illustration" src="/images/illustrations/fire_boys.png">
+                    <img class="grid-item illustration" src="/images/illustrations/ffxv_leopard.jpg">
+                    <img class="grid-item illustration" src="/images/illustrations/tg_sketch.png">
+                    <img class="grid-item illustration" src="/images/illustrations/final_furry_crossing.png">
+                    <img class="grid-item illustration" src="/images/illustrations/ffxv_group.png">
+                    <img class="grid-item illustration" src="/images/illustrations/ffxv_colored_sketch.jpg">
+                    <div class="grid-item grid-item-2 p-0 illustration">
+                        <div class="row m-0">
+                            <div class="col-6 p-0"><img class="img-fluid p-2" src="/images/illustrations/ffxv_noctis_1.jpg"></div>
+                            <div class="col-6 p-0"><img class="img-fluid p-2" src="/images/illustrations/ffxv_noctis_2.jpg"></div>
+                        </div>
+                    </div>
+                    <img class="grid-item illustration" src="/images/illustrations/fancy_girl.png">
+                    <img class="grid-item illustration" src="/images/illustrations/hinata.png">
 
-            <!-- Background of PhotoSwipe. 
-                 It's a separate element as animating opacity is faster than rgba(). -->
-            <div class="pswp__bg"></div>
-
-            <!-- Slides wrapper with overflow:hidden. -->
-            <div class="pswp__scroll-wrap">
-
-                <!-- Container that holds slides. 
-                    PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                    Don't modify these 3 pswp__item elements, data is added later on. -->
-                <div class="pswp__container">
-                    <div class="pswp__item"></div>
-                    <div class="pswp__item"></div>
-                    <div class="pswp__item"></div>
-                </div>
-
-                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-                <div class="pswp__ui pswp__ui--hidden">
-
-                    <div class="pswp__top-bar">
-
-                        <!--  Controls are self-explanatory. Order can be changed. -->
-
-                        <div class="pswp__counter"></div>
-
-                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                        <!-- element will get class pswp__preloader--active when preloader is running -->
-                        <div class="pswp__preloader">
-                            <div class="pswp__preloader__icn">
-                              <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                              </div>
-                            </div>
+                    <!--Projects-->
+                    <div class="grid-item grid-item-project project" id="variance">
+                        <div class="row m-0">
+                            <div class="col-12 p-0" style="max-height:240px;overflow:hidden;"><img class="img-fluid" style="border-radius:10px 10px 0 0;" src="/images/projects/variance/waver.png"></div>
+                            <div class="col-12 p-3 bg-pastel-green" style="border-radius:0 0 10px 10px;"><h5 class="font-weight-bold">Variance</h5><h6>An augmented reality experience.</h6></div>
+                        </div>
+                    </div>
+                    <div class="grid-item grid-item-project project" id="mural">
+                        <div class="row m-0">
+                            <div class="col-12 p-0" style="max-height:240px;overflow:hidden;"><img class="img-fluid" style="border-radius:10px 10px 0 0;" src="/images/projects/mural/1.jpg"></div>
+                            <div class="col-12 p-3 bg-pastel-yellow" style="border-radius:0 0 10px 10px;"><h5 class="font-weight-bold">Mural</h5><h6>A mural of greek mythological creatures.</h6></div>
                         </div>
                     </div>
 
-                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                    </button>
-
-                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                    </button>
-
-                    <div class="pswp__caption">
-                        <div class="pswp__caption__center"></div>
+                    <!--Fanbooks-->
+                    <div class="grid-item grid-item-full fanbook">Photos coming soon!</div>
+                    
+                    <!--Merchandise-->
+                    <img class="grid-item merchandise" src="/images/merch/ffxv_ac.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/yakuza_charm.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/ffxv_portrait.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/ffxv_furry.jpg">
+                    <div class="grid-item grid-item-2 p-0 merchandise">
+                        <div class="row m-0">
+                            <div class="col-6 p-0"><img class="img-fluid p-2" src="/images/merch/ffxv_earbuds_1.jpg"></div>
+                            <div class="col-6 p-0"><img class="img-fluid p-2" src="/images/merch/ffxv_earbuds_2.jpg"></div>
+                        </div>
                     </div>
-
+                    <div class="grid-item grid-item-2 p-0 merchandise">
+                        <div class="row m-0">
+                            <div class="col-6 p-0"><img class="img-fluid p-2" src="/images/merch/ffxv_large_1.jpg"></div>
+                            <div class="col-6 p-0"><img class="img-fluid p-2" src="/images/merch/ffxv_large_2.jpg"></div>
+                        </div>
+                    </div>
+                    <img class="grid-item merchandise" src="/images/merch/ffxv_walk.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/blossom_charms.jpg">
+                    <div class="grid-item grid-item-3 p-0 merchandise">
+                        <div class="row m-0">
+                            <div class="col-4 p-0"><img class="img-fluid p-2" src="/images/merch/link_earbuds_1.jpg"></div>
+                            <div class="col-4 p-0"><img class="img-fluid p-2" src="/images/merch/link_earbuds_2.jpg"></div>
+                            <div class="col-4 p-0"><img class="img-fluid p-2" src="/images/merch/link_earbuds_3.jpg"></div>
+                        </div>
+                    </div>
+                    <div class="grid-item grid-item-3 p-0 merchandise">
+                        <div class="row m-0">
+                            <div class="col-4 p-0"><img class="img-fluid p-2" src="/images/merch/tg_assorted.jpg"></div>
+                            <div class="col-4 p-0"><img class="img-fluid p-2" src="/images/merch/tg_memo_stand.jpg"></div>
+                            <div class="col-4 p-0"><img class="img-fluid p-2" src="/images/merch/tg_card_wallet.jpg"></div>
+                        </div>
+                    </div>
+                    <img class="grid-item merchandise" src="/images/merch/pouch_green.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/pouch_rain.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/pouch_bw.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/taiyaki_pouch.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/anime_girls.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/tg_canvas_bag.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/botw_lanyard.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/cat_lanyard.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/collab/ffxv_festival_keychain_1.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/collab/ffxv_festival_keychain_2.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/collab/ffxv_festival_pins.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/collab/vinyl_die_cut_stickers_1.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/collab/vinyl_die_cut_stickers_2.jpg">
+                    <img class="grid-item merchandise" src="/images/merch/collab/vinyl_die_cut_stickers_3.jpg">
+                    <div class="grid-item grid-item-2 p-0 merchandise">
+                        <div class="row m-0">
+                            <div class="col-6 p-0"><img class="img-fluid p-2" src="/images/merch/collab/ffxv_nocits_iphone_1.jpg"></div>
+                            <div class="col-6 p-0"><img class="img-fluid p-2" src="/images/merch/collab/ffxv_nocits_iphone_2.jpg"></div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
+            
+            <!--About-->
+            <div class="text-center bg-pastel-dark mt-5 px-3" id="about">
+                <h2>About Me</h2>
+                <h5 class="m-auto" style="line-height:1.8; max-width:1000px;">Hi my name is Chris!
+                I'm a nocturnal artist based in San Diego.
+                I studied Interdisciplinary Computing in the Arts art UC San Diego.
+                I've dabbled in different areas, from producing merchandise to sell at events around the country to interactive art.
+                I enjoy spending my time online, indulging in fantasy, and eating.</h5>
+            </div>
+            <!--Contact-->
+            <div class="text-center bg-pastel-dark mt-5" id="contact">
+                <h2>Contact</h2>
+                <h5 class="mt-3">
+                    <a href="mailto:2D.file@gmail.com" target="_blank" class="anchor-nodec">
+                        <i class="far fa-envelope mr-1"></i>2d.file@gmail.com
+                    </a>
+                </h5>
+            </div>
         </div>
         
-        <!-- add html for carousel -->
-        <script type="text/javascript" src="slick/slick.min.js"></script>
-        <script>
-            $.ajax({ url: 'main-carousel.csv',
-                     dataType: 'text',
-                    }).done(processData);
-            
-            function processData(data){
-                var allLines = data.split(/\r\n|\n/);
-                var headers = allLines[0].split(',');
-                var carousel = '';
+        <!--Footer-->
+        <footer class="mx-3 my-2">
+            <small>Christiane Pham &copy; <script>document.write(new Date().getFullYear());</script></small>
+        </footer>
 
-                for (var i=1; i<allLines.length; i++) {
-                    if(!allLines[i].includes(","))
-                        continue;
-                    var data = allLines[i].split(',');
-                    if (data.length == headers.length) {
-                        if(data[1] == '#'){
-                            carousel+='<div class= "image"><img src="' + data[0] + '"></div>';
-                        }
-                        else{
-                            carousel+='<a href="' + data[1] + '"><div class= "image"><img src="' + data[0] + '"></div></a>';
-                        }
-                    }
-                }
-                $('#image-carousel').append(carousel);
-                
-                $('.image-carousel').slick({
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: true,
-                    fade: false,
-                    infinite: true,
-                    autoplay: true,
-                    autoplaySpeed: 5000,
-                    speed: 1000,
-                    pauseOnHover: false,
-                    pauseOnFocus: false
-                });
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.min.js"></script>
+        <script>
+            //init isotope
+            var $grid = $('.grid').isotope({
+                // options
+                itemSelector: '.grid-item',
+                layoutMode: 'masonry',
+                percentPosition:true,
+                masonry:{
+                    columnWidth:'.grid-sizer'
+                },
+                filter: '.illustration'
+            });
+            //layout isotope after each image
+            $grid.imagesLoaded().progress( function() {
+                $grid.isotope('layout');
+            });
+            function gridSort(e){
+                $grid.isotope({ filter: '.' + e });
             }
-        </script>
-        
-        <!-- add html for gallery -->
-        <script>
-            $.ajax({ url: 'main-gallery.csv',
-                     dataType: 'text',
-                    }).done(processGallery);
             
-            function processGallery(data){
-                var allLines = data.split(/\r\n|\n/);
-                var headers = allLines[0].split(',');
-                var galleryhtml = "";
-
-                for (var i=1; i<allLines.length; i++) {
-                    if(!allLines[i].includes(","))
-                        continue;
-                    galleryhtml+="<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>"
-                    var data = allLines[i].split(',');
-                    if (data.length == headers.length) {
-                        if(data[0] == "#" && data[2] != "#"){
-                            galleryhtml+="<a href='"+data[2]+"' itemprop='contentUrl' data-video='" + data[3] + "' type='video'>";
-                        }
-                        else if(data[5] == "#"){
-                            galleryhtml+="<a href='"+data[0]+"' itemprop='contentUrl' data-size='" +data[1] + "'>";
-                        }
-                        else{
-                            galleryhtml+="<a href='" + data[5] + "' itemprop='contentUrl' data-size='"+data[1]+"' type='url'>";
-                        }
-                    }
-                    galleryhtml+="<img src='"+data[4]+"' itemprop='thumbnail' alt='Image description'/></a><figcaption itemprop='caption description'>" + data[6]+"</figcaption></figure>";
+            //lightbox
+            $(".illustration, .illustration img, .fanbook, .fanbook img, .merchandise, .merchandise img").on('click', function(){
+                if ($(this).is('img'))
+                    lity($(this).attr('src'));
+            });
+            $("#variance").on('click', function(){
+                lity("https://www.youtube.com/watch?v=3jCbVO8V6lk");
+            });
+            $("#mural").on('click', function(){
+                lity("/mural.html");
+            });
+            
+            //hover animations
+            var catBothered = 0;
+            $("#cat").hover(function() {
+                checkCatAnnoyed();
+            });
+            $("#cat").click(function() {
+                checkCatAnnoyed();
+            });
+            $("#cat").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",function(){
+                if($(this).hasClass("shake-bottom"))
+                    $(this).removeClass("shake-bottom");
+                else if($(this).hasClass("roll-out-right")){
+                    $("#catWoke").addClass("fade-in");
+                    $("#catWoke").removeClass("d-none");
                 }
-                $('#my-gallery').append(galleryhtml);
-            }
-        </script>
-
-        <!-- code to generate gallery -->
-        <script>
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-            var initPhotoSwipeFromDOM = function(gallerySelector) {
-
-                // parse slide data (url, title, size ...) from DOM elements 
-                // (children of gallerySelector)
-                var parseThumbnailElements = function(el) {
-                    var thumbElements = el.childNodes,
-                        numNodes = thumbElements.length,
-                        items = [],
-                        figureEl,
-                        linkEl,
-                        size,
-                        item;
-
-                    for(var i = 0; i < numNodes; i++) {
-
-                        figureEl = thumbElements[i]; // <figure> element
-
-                        // include only element nodes 
-                        if(figureEl.nodeType !== 1) {
-                            continue;
+            });
+            $(window).one("scroll", function() {
+                checkCatAnnoyed();
+            });
+            function checkCatAnnoyed(){
+                if(!$("#cat").hasClass("shake-bottom")){
+                    if(catBothered >= 3){
+                        if(!$("#cat").hasClass("roll-out-right")){
+                            $("#cat").addClass("roll-out-right");
                         }
-
-                        linkEl = figureEl.children[0]; // <a> element
-                        
-                        if(linkEl.getAttribute('type') == 'url'){
-                            continue;
-                        }
-                        
-                        if(linkEl.getAttribute('type') == 'video'){
-                            // create slide object
-                            item = {
-                                html: $(linkEl).data('video')
-                            };
-                            
-                        }else{
-                            size = linkEl.getAttribute('data-size').split('x');
-
-                            // create slide object
-                            item = {
-                                src: linkEl.getAttribute('href'),
-                                w: parseInt(size[0], 10),
-                                h: parseInt(size[1], 10)
-                            };
-                        }
-
-
-
-                        if(figureEl.children.length > 1) {
-                            // <figcaption> content
-                            item.title = figureEl.children[1].innerHTML; 
-                        }
-
-                        if(linkEl.children.length > 0) {
-                            // <img> thumbnail element, retrieving thumbnail url
-                            //item.msrc = linkEl.children[0].getAttribute('src');
-                        } 
-
-                        item.el = figureEl; // save link to element for getThumbBoundsFn
-                        items.push(item);
-                    }
-
-                    return items;
-                };
-
-                // find nearest parent element
-                var closest = function closest(el, fn) {
-                    return el && ( fn(el) ? el : closest(el.parentNode, fn) );
-                };
-
-                // triggers when user clicks on thumbnail
-                var onThumbnailsClick = function(e) {
-                    e = e || window.event;
-                    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
-                    var eTarget = e.target || e.srcElement;
-
-                    // find root element of slide
-                    var clickedListItem = closest(eTarget, function(el) {
-                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
-                    });
-
-                    if(!clickedListItem) {
-                        return;
-                    }
-
-                    // find index of clicked item by looping through all child nodes
-                    // alternatively, you may define index via data- attribute
-                    var clickedGallery = clickedListItem.parentNode,
-                        childNodes = clickedListItem.parentNode.childNodes,
-                        numChildNodes = childNodes.length,
-                        nodeIndex = 0,
-                        index,
-                        linkEl;
-                    
-                    for (var i = 0; i < numChildNodes; i++) {
-                        if(childNodes[i].nodeType !== 1) { 
-                            continue; 
-                        }
-
-                        if(childNodes[i] === clickedListItem) {
-                            index = nodeIndex;
-                            linkEl = childNodes[i].children[0];
-                            break;
-                        }
-                        nodeIndex++;
-                    }
-                    
-                    if(linkEl.getAttribute('type') == 'url'){
-                        window.open(linkEl.getAttribute('href'),"_self");
-                        return;
-                    }
-                    if(index >= 0) {
-                        // open PhotoSwipe if valid index found
-                        openPhotoSwipe( index, clickedGallery );
-                    }
-                    return false;
-                };
-
-                // parse picture index and gallery index from URL (#&pid=1&gid=2)
-                var photoswipeParseHash = function() {
-                    var hash = window.location.hash.substring(1),
-                    params = {};
-
-                    if(hash.length < 5) {
-                        return params;
-                    }
-
-                    var vars = hash.split('&');
-                    for (var i = 0; i < vars.length; i++) {
-                        if(!vars[i]) {
-                            continue;
-                        }
-                        var pair = vars[i].split('=');  
-                        if(pair.length < 2) {
-                            continue;
-                        }           
-                        params[pair[0]] = pair[1];
-                    }
-
-                    if(params.gid) {
-                        params.gid = parseInt(params.gid, 10);
-                    }
-
-                    return params;
-                };
-
-                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
-                    var pswpElement = document.querySelectorAll('.pswp')[0],
-                        gallery,
-                        options,
-                        items;
-
-                    items = parseThumbnailElements(galleryElement);
-
-                    // define options (if needed)
-                    options = {
-                        spacing: 0.05,
-                        // define gallery index (for URL)
-                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-                        showHideOpacity:true, 
-                        getThumbBoundsFn:false
-
-                    };
-
-                    // PhotoSwipe opened from URL
-                    if(fromURL) {
-                        if(options.galleryPIDs) {
-                            // parse real index when custom PIDs are used 
-                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
-                            for(var j = 0; j < items.length; j++) {
-                                if(items[j].pid == index) {
-                                    options.index = j;
-                                    break;
-                                }
-                            }
-                        } else {
-                            // in URL indexes start from 1
-                            options.index = parseInt(index, 10) - 1;
-                        }
-                    } else {
-                        options.index = parseInt(index, 10);
-                    }
-
-                    // exit if index not found
-                    if( isNaN(options.index) ) {
-                        return;
-                    }
-
-                    if(disableAnimation) {
-                        options.showAnimationDuration = 0;
-                    }
-
-                    // Pass data to PhotoSwipe and initialize it
-                    gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-                    gallery.init();
-                };
-
-                // loop through all gallery elements and bind events
-                var galleryElements = document.querySelectorAll( gallerySelector );
-
-                for(var i = 0, l = galleryElements.length; i < l; i++) {
-                    galleryElements[i].setAttribute('data-pswp-uid', i+1);
-                    galleryElements[i].onclick = onThumbnailsClick;
-                }
-
-                // Parse URL and open gallery if it contains #&pid=3&gid=1
-                var hashData = photoswipeParseHash();
-                if(hashData.pid && hashData.gid) {
-                    openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
-                }
-            };
-
-            // execute above function
-            initPhotoSwipeFromDOM('.my-gallery');
-        </script>
-        
-        <!-- Fixed navbar on scroll -->
-        <script>
-            $(document).ready(function(){
-                var navHeight = $("#navlist").offset().top;
-                $(window).bind('scroll', function(){
-                    if($(window).scrollTop() > navHeight && ($(window).width() <= 1200)){
-                        $("#navlist").addClass('fixed');
                     }
                     else{
-                        $('#navlist').removeClass('fixed');
+                        $("#cat").addClass("shake-bottom");
+                        catBothered++;
                     }
-                })
-            })
+                }
+            }
         </script>
     </body>
 </html>
