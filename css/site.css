@@ -36,6 +36,7 @@ body {
 .header-nav-item:hover{
     color:#FFAA00;
     font-weight:600;
+    text-decoration:none;
 }
 #title::after {
     content: '';
