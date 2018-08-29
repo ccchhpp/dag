@@ -31,10 +31,10 @@ body {
 
 /*Header*/
 .header-nav-item{
-    color:#585858;
+    color:#00B8AE;
 }
 .header-nav-item:hover{
-    color:#585858;
+    color:#FFAA00;
     font-weight:600;
 }
 #title::after {
