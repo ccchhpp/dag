@@ -80,7 +80,7 @@ body {
     background-color:transparent;
     border:none;
     color:#00B8AE;
-    \\border-bottom:2px solid #FFAA00;
+    /*border-bottom:2px solid #FFAA00;*/
     font-weight: bold;
 }
 
