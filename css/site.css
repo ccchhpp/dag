@@ -5,27 +5,24 @@ body {
 }
 
 /*Colors*/
-.bg-pastel-blue{
-    background-color:#B4DAF2;
-}
-.bg-pastel-green{
-    background-color:#B2EECD;
-}
-.bg-pastel-red{
-    background-color:#F9BFB9;
-}
-.bg-pastel-yellow{
-    background-color:#FBEBA8;
+.bg-pastel-light{
+    background-color:#F5F5F5;
 }
 .bg-pastel-dark{
-    background-color:#EBEBEB
+    background-color:#EBEBEB;
+}
+.bg-pastel-darker{
+    background-color:#38393C;
 }
 
 .text-pastel-blue{
-    color:#00B8AE;
+    color:#00B8AE!important;
 }
 .text-pastel-yellow{
-    color:#FFAA00;
+    color:#FFAA00!important;
+}
+.text-pastel-dark{
+    color:#585858!important;
 }
 /*END Colors*/
 
@@ -35,7 +32,6 @@ body {
 }
 .header-nav-item:hover{
     color:#FFAA00;
-    font-weight:600;
     text-decoration:none;
 }
 #title::after {
@@ -155,6 +151,8 @@ body {
 .grid-item-full{
     width:100%;
 }
+.project { transition: all .2s ease-in-out; }
+.project:hover { transform: scale(1.01); }
 /*END Work*/
 
 /*About*/
@@ -181,5 +179,12 @@ body {
 .anchor-nodec:hover{
     color: inherit;
     font-weight:600;
+}
+.nodec{
+    color:inherit;
+}
+.nodec:hover{
+    text-decoration:none;
+    color:inherit;
 }
 /*END Tools*/

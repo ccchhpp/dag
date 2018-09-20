@@ -1,0 +1,21 @@
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    font-weight: normal;
+}
+.nav-link{
+    margin:.5rem .5rem .5rem .5rem;
+    padding:0 .2rem .1rem .2rem;
+}
+
+.main-row{
+    max-width:1000px;
+}
+.about-row{
+    max-width:750px;
+}
+.process-row{
+    max-width:750px;
+}
+
+.variance-video{
+    max-width:500px;
+}
