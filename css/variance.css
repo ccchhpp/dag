@@ -19,3 +19,19 @@
 .variance-video{
     max-width:500px;
 }
+
+@media (max-width:500px){
+    .nav-link-variance{
+        padding: .5rem .5rem;
+    }
+}
+@media (max-width:330px){
+    .nav-link-variance{
+        font-size:.8rem;
+    }
+}
+@media (max-width:295px){
+    .nav-link-variance{
+        font-size:.7rem;
+    }
+}

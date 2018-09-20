@@ -26,6 +26,10 @@ body {
 }
 /*END Colors*/
 
+.navbar-light .navbar-toggler{
+    border:none;
+}
+
 /*Header*/
 .header-nav-item{
     color:#00B8AE;
@@ -56,17 +60,17 @@ body {
     color:#FFAA00;
 }
 @media (max-width:500px){
-    .nav-link{
+    .nav-link-main{
         padding: .5rem .5rem;
     }
 }
 @media (max-width:415px){
-    .nav-link{
+    .nav-link-main{
         font-size:.8rem;
     }
 }
 @media (max-width:350px){
-    .nav-link{
+    .nav-link-main{
         font-size:.7rem;
     }
 }
