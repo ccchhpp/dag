@@ -59,6 +59,9 @@
                     <li class="nav-item">
                         <a class="nav-link nav-link-main active" id="illustrations-tab" data-toggle="tab" href="#illustrations" role="tab" aria-controls="illustrations" aria-selected="true" onclick="gridSort('illustration')">illustrations</a>
                     </li>
+                        <li class="nav-item">
+                        <a class="nav-link nav-link-main" id="sequential-tab" data-toggle="tab" href="#sequential" role="tab" aria-controls="sequential" aria-selected="false" onclick="gridSort('sequential')">sequential</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-main" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false" onclick="gridSort('project')">projects</a>
                     </li>
@@ -103,6 +106,15 @@
                     <img class="grid-item illustration" src="/images/illustrations/fancy_girl.png">
                     <img class="grid-item illustration" src="/images/illustrations/hinata.png">
                     <!--END Illustrations-->
+                    
+                       <!--Sequential-->
+                    <div class="grid-item grid-item-sequential sequential" id="nx">
+                        <div class="row m-0">
+                            <div class="col-12 p-0" style="max-height:240px;overflow:hidden;"><img class="img-fluid" style="border-radius:10px 10px 0 0;" src="/images/sequential/nx/nx1.png"></div>
+                            <div class="col-12 p-3 bg-pastel-dark" style="border-radius:0 0 10px 10px;"><h5 class="font-weight-bold">no peace in death</h5><h6>mdzs fancomic</h6></div>
+                        </div>
+                    </div>
+                    <!--END Sequential-->
 
                     <!--Projects-->
                     <div class="grid-item grid-item-project project" id="variance">
@@ -253,6 +265,9 @@
             $("#sandma").on('click', function(){
                 window.open("/sandma", "_self");
             });
+            $("#nx").on('click', function(){
+                window.open("/nx", "_self");
+            });
 
             // Javascript to enable link to tab
             var url = document.location.toString();
@@ -261,6 +276,13 @@
                     $grid.imagesLoaded( function(){
                         $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
                         gridSort('illustration');
+                        document.getElementById("work").scrollIntoView();
+                    });
+                }
+                else if(url.split('#')[1] == "sequential"){
+                    $grid.imagesLoaded( function(){
+                        $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+                        gridSort('sequential');
                         document.getElementById("work").scrollIntoView();
                     });
                 }
