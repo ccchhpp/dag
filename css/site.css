@@ -4,6 +4,13 @@ body {
     color:#585858;
 }
 
+::selection {
+    background: #FFAA00; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #FFAA00; /* Gecko Browsers */
+  }
+
 /*Colors*/
 .bg-pastel-light{
     background-color:#F5F5F5;
@@ -57,6 +64,10 @@ body {
 /*Work*/
 .nav-tabs{
     border-bottom:none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -moz-box;
 }
 .nav-link{
     color:#00B8AE;
